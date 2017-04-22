@@ -5,7 +5,7 @@
 
 工程包含以下两方面内容：
 
-1. 使用了 [Raml](http://raml.org/) 设计一个简化版`Company-Employee`管理系统的RESTful API，并通过 [raml2html](https://github.com/raml2html/raml2html) 文档化API，利用 [osprey](https://github.com/mulesoft/osprey) 构建API Mock Server。
+1. 使用了 [Raml](http://raml.org/) 设计一个简化版`Company-Employee`管理系统的RESTful API，并通过 [raml2html](https://github.com/raml2html/raml2html) 文档化API，利用 [osprey-mock-service](https://github.com/mulesoft-labs/osprey-mock-service) 构建API Mock Server。
 
 2. 借助 [Docker](https://docs.docker.com/) 将构建动作进行了抽离，封装在独立的`Image`，使用 [Docker-compose](https://docs.docker.com/compose/) 将数据和构建进行搭桥并一键启动所有服务。
 
