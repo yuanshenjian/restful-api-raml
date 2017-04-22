@@ -1,11 +1,9 @@
 version: '3'
 services:
-  raml-server:
+  raml:
     build: .
     ports:
-      - "8089:8080"
+      - "8088:8080"
       - "8082:8081"
-    environment:
-      - NODE_ENV=dev
     volumes:
       - ./data:/app/data

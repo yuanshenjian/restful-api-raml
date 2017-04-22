@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "docs-generator": "raml2html data/api.raml > api.html",
-    "mock-server": "osprey-mock-service -f data/api.raml -p 8080 --cors",
+    "mock-server": "osprey -f data/api.raml -p 8080",
     "api-watcher": "nodemon --watch data --ext raml,json,markdown watcher-tasks.js",
     "docs-server": "live-server --port=8081 --watch=api.html --entry-file=api.html"
   },
@@ -18,7 +18,7 @@
   "dependencies": {
     "live-server": "^1.2.0",
     "nodemon": "^1.11.0",
-    "osprey-mock-service": "^0.2.0",
+    "osprey": "^0.4.1",
     "raml2html": "^6.1.0"
   }
 }
