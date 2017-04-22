@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "name": "raml-tools",
+  "main": "index.js",
+  "scripts": {
+    "docs-generator": "raml2html data/api.raml > api.html",
+    "mock-server": "osprey-mock-service -f data/api.raml -p 8080 --cors",
+    "api-watcher": "nodemon --watch data --ext raml,json,markdown watcher-tasks.js",
+    "docs-server": "live-server --port=8081 --watch=api.html --entry-file=api.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/hwlive/live-api-contracts.git"
+  },
+  "author": "hw-live@thoughtworks.com",
+  "homepage": "https://gitlab.com/hwlive/live-api-contracts#README",
+  "dependencies": {
+    "live-server": "^1.2.0",
+    "nodemon": "^1.11.0",
+    "osprey-mock-service": "^0.2.0",
+    "raml2html": "^6.1.0"
+  }
+}

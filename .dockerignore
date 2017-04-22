@@ -1,0 +1,11 @@
+.git
+.npmrc
+.DS_Store
+.idea
+.gitignore
+.dockerignore
+.gitlab-ci.yml
+api.html
+
+README.md
+node_modules/

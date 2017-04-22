@@ -1,0 +1,29 @@
+#%RAML 1.0
+---
+title: Huawei Live SaaS
+description: A RESTful API for Live SaaS Platform
+version: '1'
+protocols: [ HTTP, HTTPS ]
+mediaType: application/json
+baseUri: https://www.thoughtworks.com
+documentation:
+  - title: Home
+    content: |
+      Welcome to the Huawei Live Business SaaS API Documentation. The API
+      allows you to create applications for live business.
+  - title: Legal
+    content: !include docs/legal.markdown
+
+types:
+  Email: !include data-types/email.raml
+  Url: !include data-types/url.raml
+  Company: !include data-types/company/Company.raml
+
+
+traits:
+  pageable: !include traits/pageable.raml
+  searchable: !include traits/searchable.raml
+
+
+/companies:
+  !include raml/company.raml
