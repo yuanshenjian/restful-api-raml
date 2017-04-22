@@ -46,7 +46,7 @@ services:
 
 
 ### 调式API
-启动后，如果访问[http://localhost:8082](http://localhost:8082)没有正常出现API文档，使用一下命令查看错误日志：
+启动后，如果访问[http://localhost:8082](http://localhost:8082)没有正常出现API文档，运行下面手动生成API 文档命令查看错误日志：
 
 ```sh
 $ npm run docs-generator
