@@ -23,8 +23,7 @@ $ docker-compose up
 
 ## 访问服务
 * api-docs: [http://localhost:8082](http://localhost:8082)
-
-* mock-server (http://localhost:8088/companies): [http://localhost:8088/companies](http://localhost:8088/companies)
+* mock-server: [http://localhost:8088/companies](http://localhost:8088/companies)
 
 
 ## 私人订制
