@@ -16,6 +16,16 @@ get:
         application/json:
           type: Company[]
 
+post:
+  description: 创建一条公司信息
+  body:
+    type: Company
+  responses:
+    200:
+      body:
+        application/json:
+          type: Company
+
 
 /{id}:
   get:
@@ -25,7 +35,10 @@ get:
         body:
           application/json:
             type: Company
-            example: !include ../examples/company/Company.json
+            example: !include ../examples/company.json
+
+  /employees: !include employee.raml
+
 
 
 

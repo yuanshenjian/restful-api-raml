@@ -1,0 +1,26 @@
+displayName: Employee
+
+get:
+  description: 获取具体某个公司的员工信息
+  responses:
+    200:
+      body:
+        application/json:
+          type: Employee[]
+          example: !include ../examples/employees.json
+
+
+/{id}:
+  get:
+    description: 获取具体某个公司的某个员工信息
+    responses:
+      200:
+        body:
+          application/json:
+            type: Employee
+            example: !include ../examples/employee.json
+
+
+
+
+
