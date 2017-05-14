@@ -1,0 +1,118 @@
+displayName: User
+
+/{account}:
+  get:
+    description: 查看给定账户名的用户信息
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "id": "2nldksfr4f2ifoa4g43rvfsdfdsfdaf2",
+                  "account": "sjyuan",
+                  "phoneNumber": "18192235667",
+                  "gender": "MALE",
+                  "name": "袁慎建"
+                }
+              ]
+  put:
+    description: 更新给定账户名的用户信息
+    body:
+      application/json:
+        schema: |
+          {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-03/schema",
+            "id": "http://jsonschema.net",
+            "required": true,
+            "properties": {
+              "password": {
+                "type": "string",
+                "required": true,
+                "minLength": 6,
+                "maxLength": 32
+              },
+              "name": {
+                "type": "string",
+                "required": false
+              }
+            }
+          }
+    responses:
+      301:
+
+  delete:
+    description: 删除给定账户名的用户
+    responses:
+      204:
+
+get:
+  description: 查看用户列表
+  queryParameters:
+    gender:
+      description: "性别"
+      required: false
+      type: string
+      pattern: "MALE|FEMALE"
+  responses:
+    200:
+      body:
+        application/json:
+          example: |
+            [
+              {
+                "id": "2nldksfr4f2ifoa4g43rvfsdfdsfdaf2",
+                "account": "sjyuan",
+                "phoneNumber": "18192235667",
+                "gender": "MALE",
+                "name": "袁慎建"
+              }
+            ]
+
+post:
+  description: 注册一个新用户
+  body:
+    application/json:
+      schema: |
+        {
+          "type": "object",
+          "$schema": "http://json-schema.org/draft-03/schema",
+          "id": "http://jsonschema.net",
+          "required": true,
+          "properties": {
+            "account": {
+              "type": "string",
+              "required": true,
+              "minLength": 2,
+              "maxLength": 20
+            },
+            "password": {
+              "type": "string",
+              "required": true,
+              "minLength": 6,
+              "maxLength": 32
+            },
+            "phoneNumber": {
+              "type": "string",
+              "required": true
+            },
+            "name": {
+              "type": "string",
+              "required": false
+            }
+          }
+        }
+  responses:
+    201:
+      body:
+        application/json:
+          example: |
+            {
+              "id": "2nldksfr4f2ifoa4g43rvfsdfdsfdaf2",
+              "account": "sjyuan",
+              "phoneNumber": "18192235667",
+              "gender": "MALE",
+              "name": "袁慎建"
+            }
