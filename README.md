@@ -45,8 +45,13 @@ services:
 
 
 ### 调式API
-启动后，如果访问[http://localhost:8082](http://localhost:8082)没有正常出现API文档，运行下面手动生成API 文档命令查看错误日志：
+启动后，如果访问[http://localhost:8082](http://localhost:8082)没有正常出现API文档，可以进入容器，运行下面手动生成API 文档命令查看错误日志：
 
 ```sh
+$ docker ps
+CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS              PORTS                                            NAMES
+3d13adb457f3        dojorestfulapiraml_raml   "/usr/bin/supervisord"   3 weeks ago         Up 6 seconds        0.0.0.0:8088->8080/tcp, 0.0.0.0:8082->8081/tcp   dojorestfulapiraml_raml_1
+
+$ docker exec -it 3d13adb457f3 sh
 $ npm run docs-generator
 ```
