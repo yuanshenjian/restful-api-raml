@@ -1,31 +1,26 @@
 #%RAML 1.0
 ---
-title: Company
-description: A powerful RESTful api design, build, test tool
+title: Share Library
+description: A whole set of apis for Share Library.
 version: '1'
 protocols: [ HTTP, HTTPS ]
 mediaType: application/json
-baseUri: https://www.thoughtworks.com
+baseUri: http://sjyuan.cc
+
 documentation:
   - title: Home
     content: |
-      Welcome to the company RESTful API Documentation. The API
-      allows you to manage employee for company.
+      Welcome to the Share Library RESTful API Documentation. The API
+      allows you to manage users' books.
   - title: Legal
     content: !include docs/legal.markdown
 
 types:
   Email: !include data-types/email.raml
   Url: !include data-types/url.raml
-  Company: !include data-types/company.raml
-  Employee: !include data-types/employee.raml
-
 
 traits:
   pageable: !include traits/pageable.raml
   searchable: !include traits/searchable.raml
-
-
-/companies: !include raml/company.raml
 
 /users: !include raml/user.raml
