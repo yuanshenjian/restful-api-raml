@@ -14,7 +14,7 @@
     "url": "https://github.com/sjyuan-cc/restful-api-raml.git"
   },
   "author": "sjyuan@thoughtworks.com",
-  "homepage": "https://github.com/sjyuan-cc/restful-api-raml",
+  "homepage": "http://sjyuan.cc",
   "dependencies": {
     "live-server": "^1.2.0",
     "nodemon": "^1.11.0",
