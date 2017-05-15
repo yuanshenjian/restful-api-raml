@@ -1,7 +1,7 @@
 {
   "private": true,
   "version": "1.0.0",
-  "name": "raml-tools",
+  "name": "share-library",
   "main": "index.js",
   "scripts": {
     "docs-generator": "raml2html data/api.raml > api.html",
