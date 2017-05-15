@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/hwlive/live-api-contracts.git"
+    "url": "https://github.com/sjyuan-cc/restful-api-raml.git"
   },
-  "author": "hw-live@thoughtworks.com",
-  "homepage": "https://gitlab.com/hwlive/live-api-contracts#README",
+  "author": "sjyuan@thoughtworks.com",
+  "homepage": "https://github.com/sjyuan-cc/restful-api-raml",
   "dependencies": {
     "live-server": "^1.2.0",
     "nodemon": "^1.11.0",
