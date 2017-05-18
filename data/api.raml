@@ -5,7 +5,7 @@ description: A whole set of apis for Share Library.
 version: '1'
 protocols: [ HTTP, HTTPS ]
 mediaType: application/json
-baseUri: http://sjyuan.cc
+baseUri: http://sjyuan.cc/
 
 documentation:
   - title: Home
@@ -23,4 +23,4 @@ traits:
   pageable: !include traits/pageable.raml
   searchable: !include traits/searchable.raml
 
-/users: !include raml/user.raml
+/v1/users: !include raml/user.raml

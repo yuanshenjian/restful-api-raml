@@ -32,7 +32,6 @@ post:
         {
           "type": "object",
           "$schema": "http://json-schema.org/draft-03/schema",
-          "id": "http://jsonschema.net",
           "required": true,
           "properties": {
             "account": {
@@ -95,12 +94,11 @@ post:
           {
             "type": "object",
             "$schema": "http://json-schema.org/draft-03/schema",
-            "id": "http://jsonschema.net",
             "required": true,
             "properties": {
               "password": {
                 "type": "string",
-                "required": true,
+                "required": false,
                 "minLength": 6,
                 "maxLength": 32
               },

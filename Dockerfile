@@ -13,7 +13,6 @@ RUN cd /app && npm i --silent
 
 COPY supervisord.conf /app
 COPY watcher-tasks.js /app
-COPY supervisord.conf supervisord.conf
 
 EXPOSE 8080 8081
 CMD ["/usr/bin/supervisord"]
